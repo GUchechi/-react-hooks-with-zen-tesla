@@ -4,7 +4,10 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0)
-  const colors = ["red", "green", "blue", "yellow", "orange", "pink"];
+  const colors = ["red", "green", "blue", "yellow", "orange", "pink", "white" , 
+  "black", "purple", "olive", "gray", "lime", "violet", "maroon", "cream", "tan", "teal", 
+  "mustard", "navy blue", "coral", "burgundy", "lavender", "mauve", "peach", "rust", "gold", "silver", "cyan"
+];
   const divRef = useRef();
 
   const handleDecrement = () => {
