@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
   const colors = ["red", "green", "blue", "yellow", "orange", "pink", "white" , 
   "black", "purple", "olive", "gray", "lime", "violet", "maroon", "cream", "tan", "teal", 
-  "mustard", "navy blue", "coral", "burgundy", "lavender", "mauve", "peach", "rust", "gold", "silver", "cyan"
+  "mustard", "navy blue", "coral", "burgundy", "lavender", "mauve", "peach", "rust", "gold", "silver", "cyan","cray"
 ];
   const divRef = useRef();
 
@@ -14,7 +14,7 @@ function App() {
     if(count === 0) return;
     setCount(count - 1)
   }
-
+ 
   
   const handleIncrement = () => {
     setCount(count + 1)
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <div className="counter">
-        <h1 ref={divRef}>Hello!!!</h1>
+        <h1 ref={divRef}> Hey There, pls click me!!!</h1>
         <h2>{count}</h2>
         <div className="btnContainer">
           <button onClick={handleDecrement}>-1</button>
