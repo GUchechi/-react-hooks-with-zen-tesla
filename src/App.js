@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const colors = ["red", "green", "blue", "yellow", "orange", "pink"];
+  const divRef = useRef();
 
   const handleDecrement = () => {
     if(count === 0) return;
@@ -21,13 +23,17 @@ function App() {
   }
 
   useEffect(() => {
+    divRef.current.style.color= 
+    colors[Math.floor(Math.random()*colors.length)]
+
     console.log("hello world")
-  }, []);
+  }, [count]);
 
 
   return (
     <div className="App">
       <div className="counter">
+        <h1 ref={divRef}>Hello!!!</h1>
         <h2>{count}</h2>
         <div className="btnContainer">
           <button onClick={handleDecrement}>-1</button>
